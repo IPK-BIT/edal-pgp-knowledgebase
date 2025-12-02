@@ -18,6 +18,10 @@ export default defineConfig({
 					label: 'edal-Web Submission',
 					autogenerate: { directory: '02-edal-web-submission' },
 				},
+				{
+					label: 'Review Process',
+					autogenerate: { directory: '03-review-process' },
+				},
 			],
 		}),
 	],
