@@ -8,6 +8,75 @@ authors:
   - dominik-brilhaus
 ---
 
+### Astro starlight components
+
+import { Steps } from '@astrojs/starlight/components';
+import { Card } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+
+
+#### Steps
+
+<Steps>
+
+    1. Step 1
+    2. Step 2
+    3. ...
+
+</Steps>
+
+#### Cards
+
+<Card icon="pen" title="SomeCard">
+
+    this is a Card
+
+</Card>
+
+#### File Tree 
+
+<FileTree>
+        - assays
+            - **SugarMeasurement**
+                - dataset
+                    - ...
+                - protocols
+                    - ...
+                - isa.assay.xlsx
+                - README.md
+            - ...
+</FileTree>
+
+
+#### Tabs
+
+<Tabs syncKey="pl">
+
+{/* FSHARP */}
+<TabItem label="FSharp" icon='seti:f-sharp'>
+
+```fsharp
+open ARCtrl
+
+let arc = ARC()
+```
+</TabItem>
+
+{/* JAVASCRIPT */}
+<TabItem label="JavaScript" icon='seti:javascript'>
+
+```js
+import {ARC} from "@nfdi4plants/arctrl";
+
+let arc = new ARC()
+```
+</TabItem>
+
+</Tabs>
+
+
 
 ### Viola Chat Bubble
 
