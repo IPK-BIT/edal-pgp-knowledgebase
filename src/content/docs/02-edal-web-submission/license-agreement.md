@@ -1,6 +1,6 @@
 ---
 title: License Agreement
-date: 2025-12-02
+lastUpdated: 2025-12-02
 sidebar:
   order: 3
 ---

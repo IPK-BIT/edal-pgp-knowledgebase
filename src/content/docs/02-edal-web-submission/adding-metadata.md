@@ -1,6 +1,6 @@
 ---
 title: Adding Metadata
-description: A guide on how to correctly describe the metadata of your dataset using the e!DAL web submission interface.
+lastUpdated: 2025-12-02
 sidebar:
   label: Adding Metadata
   order: 1

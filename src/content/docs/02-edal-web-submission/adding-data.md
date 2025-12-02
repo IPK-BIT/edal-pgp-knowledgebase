@@ -1,7 +1,6 @@
 ---
 title: Adding Data
-description: Learn how to upload files from your local drive or import large datasets directly from S3 buckets into e!DAL
-date: 2025-12-02
+lastUpdated: 2025-12-02
 sidebar:
   label: Adding Data
   order: 2
