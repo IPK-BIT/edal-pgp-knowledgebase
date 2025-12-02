@@ -16,7 +16,7 @@ export default defineConfig({
 	integrations: [
 		icon(), 
 		starlight({
-			title: 'edal-PGP',
+			title: 'e!dal-PGP Knowledge Base',
 			favicon: "favicon.png",
 			customCss: [
       // Relative path to your custom CSS file
@@ -57,6 +57,11 @@ export default defineConfig({
 				{
 					label: 'The PGP repository',
 					autogenerate: { directory: '04-pgp-repository' },
+				},
+				{
+					label: 'Developer Docs',
+					badge: { text: 'For Developers', variant: 'note' },
+					autogenerate: { directory: '05-developer-docs' },
 				},
 			],
     expressiveCode: {
