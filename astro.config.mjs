@@ -9,6 +9,11 @@ export default defineConfig({
 		starlight({
 			title: 'edal-PGP',
 			favicon: "favicon.png",
+			customCss: [
+      // Relative path to your custom CSS file
+      './src/styles/tailwind.css',
+      // './src/styles/custom.css',
+			],
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/IPK-BIT/edal-pgp-knowledgebase' }],
 			sidebar: [
 				{
