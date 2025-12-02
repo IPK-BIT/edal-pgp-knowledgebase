@@ -5,6 +5,7 @@ This new Knowledgebase reproduces materials from:
 - https://edal.ipk-gatersleben.de/index.html
 - https://edal-pgp.ipk-gatersleben.de
 
+Most custom components and styling were reused from https://github.com/nfdi4plants/nfdi4plants.knowledgebase create by [Kevin Freymaurer](https://github.com/Freymaurer).
 
 ## Setup
 
