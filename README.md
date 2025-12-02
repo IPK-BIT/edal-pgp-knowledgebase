@@ -1,5 +1,11 @@
 # eDAL-PGP Knowledgebase
 
+This new Knowledgebase reproduces materials from:
+
+- https://edal.ipk-gatersleben.de/index.html
+- https://edal-pgp.ipk-gatersleben.de
+
+
 ## Setup
 
 ```bash
