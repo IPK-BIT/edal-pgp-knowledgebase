@@ -12,51 +12,50 @@ import IPK from '@images/logos/ipk_logo.jpg'
 import TRANSPLANT from '@images/logos/transplant.png'
 
 The development of the e!DAL API is funded and supported by several projects:
+<style>{`
+.ack-list { display:flex; flex-direction:column; gap:24px; }
+.ack-item { display:flex; align-items:center; gap:24px; }
+.ack-item img { width:200px; height:auto; flex:0 0 200px; object-fit:contain; }
+.ack-item .text { flex:1; min-width:0; }
+`}</style>
 
-<div style="display:flex; align-items:center; gap:25px;">
-  
-  <img src={DPPN.src} width="200px"/>
+<div className="ack-list">
 
-  <div>
-  [DPPN](http://www.dppn.de/dppn/EN/Home/home_node.html) – The German Federal Ministry of Education and Research within the German-Plant-Phenotyping Network "DPPN" (FKZ 031A053)
+  <div className="ack-item">
+    <img src={DPPN.src} alt="DPPN logo"/>
+    <div className="text">
+      <a href="http://www.dppn.de/dppn/EN/Home/home_node.html">DPPN</a> – The German Federal Ministry of Education and Research within the German-Plant-Phenotyping Network "DPPN" (FKZ 031A053)
+    </div>
   </div>
-</div>
 
-<div style="display:flex; align-items:center; gap:25px;">
-  
-  <img src={TRANSPLANT.src} width="200px"/>
-  
-  <div>
-  [transPLANT](http://www.transplantdb.eu/) – The European Commission in the transPlant project within its 7th Framework Program, under the thematic area “Infrastructures”, contract number 283496
+  <div className="ack-item">
+    <img src={TRANSPLANT.src} alt="transPLANT logo"/>
+    <div className="text">
+      <a href="http://www.transplantdb.eu/">transPLANT</a> – The European Commission in the transPlant project within its 7th Framework Program, under the thematic area “Infrastructures”, contract number 283496
+    </div>
   </div>
-</div>
 
-
-<div style="display:flex; align-items:center; gap:25px;">
-  
-  <img src={DENBI.src} width="200px"/>
-
-  <div>
-  [de.NBI](https://www.denbi.de/) – The PGP repository as first instance of the e!DAL API is registered as a service of the German Network for Bioinformatics Infrastructure (de.NBI).
+  <div className="ack-item">
+    <img src={DENBI.src} alt="de.NBI logo"/>
+    <div className="text">
+      <a href="https://www.denbi.de/">de.NBI</a> – The PGP repository as first instance of the e!DAL API is registered as a service of the German Network for Bioinformatics Infrastructure (de.NBI).
+    </div>
   </div>
-</div>
 
-<div style="display:flex; align-items:center; gap:25px;">
-  
-  <img src={ELIXIRDE.src} width="200px"/>
-  
-  <div>
-  [ELIXIR Germany](https://www.elixir-europe.org/about-us/who-we-are/nodes/germany) – 
+  <div className="ack-item">
+    <img src={ELIXIRDE.src} alt="ELIXIR Germany logo"/>
+    <div className="text">
+      <a href="https://www.elixir-europe.org/about-us/who-we-are/nodes/germany">ELIXIR Germany</a> –
+    </div>
   </div>
-</div>
 
-<div style="display:flex; align-items:center; gap:25px;">
-
-  <img src={IPK.src} width="200px"/>
-
-  <div>
-  [IPK Gatersleben](http://www.ipk-gatersleben.de/) – e!DAL was initiated and developed at Leibniz Institute of Plant Genetics and Crop Plant Research (IPK) Gatersleben as infrastructural service.
+  <div className="ack-item">
+    <img src={IPK.src} alt="IPK Gatersleben logo"/>
+    <div className="text">
+      <a href="http://www.ipk-gatersleben.de/">IPK Gatersleben</a> – e!DAL was initiated and developed at Leibniz Institute of Plant Genetics and Crop Plant Research (IPK) Gatersleben as infrastructural service.
+    </div>
   </div>
+
 </div>
 
 
