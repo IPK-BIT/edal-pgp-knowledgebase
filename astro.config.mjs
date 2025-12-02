@@ -8,6 +8,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'edal-PGP',
+			favicon: "favicon.png",
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/IPK-BIT/edal-pgp-knowledgebase' }],
 			sidebar: [
 				{
@@ -21,6 +22,10 @@ export default defineConfig({
 				{
 					label: 'Review Process',
 					autogenerate: { directory: '03-review-process' },
+				},
+				{
+					label: 'The PGP repository',
+					autogenerate: { directory: '04-pgp-repository' },
 				},
 			],
 		}),
