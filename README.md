@@ -1,11 +1,11 @@
-# eDAL-PGP Knowledge Base
+# e!DAL-PGP Knowledge Base
 
-This new Knowledge Base reproduces materials from:
+This new e!DAL-PGP Knowledge Base reproduces materials from:
 
 - https://edal.ipk-gatersleben.de/index.html
 - https://edal-pgp.ipk-gatersleben.de
 
-Most custom components and styling were reused from https://github.com/nfdi4plants/nfdi4plants.Knowledge Base create by [Kevin Freymaurer](https://github.com/Freymaurer).
+Most custom components and styling were reused from the [DataPLANT Knowledge Base](https://github.com/nfdi4plants/nfdi4plants.knowledgebase) created by [Kevin Freymaurer](https://github.com/Freymaurer).
 
 ## Contribution
 
