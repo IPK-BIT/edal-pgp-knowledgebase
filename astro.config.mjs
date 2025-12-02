@@ -4,21 +4,19 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	base: '/edal-pgp-knowledgebase',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'edal-PGP',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/IPK-BIT/edal-pgp-knowledgebase' }],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'About',
+					autogenerate: { directory: '01-about' },
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'edal-Web Submission',
+					autogenerate: { directory: '02-edal-web-submission' },
 				},
 			],
 		}),

@@ -1,49 +1,64 @@
-# Starlight Starter Kit: Basics
+# eDAL-PGP Knowledgebase
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+## Setup
 
-```
+```bash
 npm create astro@latest -- --template starlight
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Install
 
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
-
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+```bash
+npm install
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## Run locally
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+```bash
+npm run dev
+```
 
-Static assets, like favicons, can be placed in the `public/` directory.
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## Structure
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+#### Review Process
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+- Confirmation email from edal
+  - Confirms receipt of submission
+  - Copy of license agreement
+- Wait and hope (Hope and deliverance)
+  - Reviewers receive email
+  - content review, e.g. (meta)data completeness
+  - technical review (e.g. open data formats)
+  - legal review (e.g. )
+- "Review response email"
+  - Rejection response -> chance to re-submit
+  - Acceptance
+    - Link 1: Preview link --> restricted, not a DOI --> can be used during paper submission / journal reviewers
+    - Link 2: DOI assignment link --> DOI is minted and available for final reference (e.g. in paper)
+    - Link 3: Cancel submission
+
+
+### (Using the) PGP repository
+
+#### Search 
+
+- DOI / repo search https://doi.ipk-gatersleben.de/search
+- Help docs: https://edal-pgp.ipk-gatersleben.de/document/search.html
+
+#### PGP Records
+
+- Citation panel
+- Files panel
+  - download individual files
+  - download full record as a ZIP folder
+- Metadata panel
+
+### Statistics
+
+https://doi.ipk-gatersleben.de/report
+
+
