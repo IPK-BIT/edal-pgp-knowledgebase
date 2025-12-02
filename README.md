@@ -7,20 +7,14 @@ This new Knowledge Base reproduces materials from:
 
 Most custom components and styling were reused from https://github.com/nfdi4plants/nfdi4plants.Knowledge Base create by [Kevin Freymaurer](https://github.com/Freymaurer).
 
-## Setup
+## Contribution
 
-```bash
-npm create astro@latest -- --template starlight
-```
+Please check the [contribution guide](https://github.com/nfdi4plants/nfdi4plants.knowledgebase/blob/main/CONTRIBUTING.md).
 
-## Install
+## License
 
-```bash
-npm install
-```
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
 
-## Run locally
-
-```bash
-npm run dev
-```
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
