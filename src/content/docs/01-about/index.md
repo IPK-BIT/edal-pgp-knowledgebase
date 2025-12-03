@@ -5,7 +5,14 @@ sidebar:
   order: 0
 ---
 
-e!DAL - Plant Genomics & Phenomics Research Data Repository
+<div className="flex items-center-middle gap-10">
+  
+  ![edal](@images/logos/edal.png)
+
+  <div className="min-w-0">
+    e!DAL - Plant Genomics & Phenomics Research Data Repository
+  </div>
+</div> 
 
 The [Leibniz Institute of Plant Genetics and Crop Plant Research (IPK)](http://www.ipk-gatersleben.de/) and German Plant Phenotyping Network (DPPN) has jointly initiated the Plant Genomics and Phenomics Research Data Repository (PGP) as infrastructure to comprehensively publish plant research data. This covers in particular cross-domain datasets that are not being published in central repositories because of its volume or unsupported data scope, like image collections from plant phenotyping and microscopy, unfinished genomes, genotyping data, visualizations of morphological plant models, data from mass spectrometry as well as software and documents.
 
