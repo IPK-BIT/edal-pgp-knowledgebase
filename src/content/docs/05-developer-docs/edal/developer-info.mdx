@@ -5,3 +5,311 @@ sidebar:
   order: 2
 ---
 
+import { LinkCard, Tabs, TabItem } from '@astrojs/starlight/components';
+
+<LinkCard title="Java Documentation (Version 3.0.4)" href="https://edal.ipk-gatersleben.de/javadoc/index.html" />
+<LinkCard title="Source Code" href="https://bitbucket.org/ipk_bit_team/electronicdataarchivelibrary" />
+<LinkCard title="Issue Tracker" href="https://bitbucket.org/ipk_bit_team/electronicdataarchivelibrary/issues" />
+
+## Examples for API functionality
+
+<Tabs>
+  <TabItem label="Mount">
+
+  e!DAL needs a configuration and authenticated subject as basis for mounting the actual back-end implementation.
+
+  ```java
+  EdalConfiguration configuration = new EdalConfiguration("", "", "10.5072",
+      new InternetAddress("scientific_reviewer@mail.com"),
+      new InternetAddress("substitute_reviewer@mail.com"),
+      new InternetAddress("managing_reviewer@mail.com"),
+      new InternetAddress("root@mail.com"));
+
+  PrimaryDataDirectory rootDirectory = DataManager.getRootDirectory(
+      EdalHelpers.getFileSystemImplementationProvider(false, configuration),
+      EdalHelpers.authenticateWinOrUnixOrMacUser());
+
+</TabItem> <TabItem label="Authentication">
+
+e!DAL needs a Subject to authenticate a user. The EdalHelpers class provides convenient methods for several login modules.
+
+```java
+/* use Windows or Unix or MAC login module */
+Subject osSubject = EdalHelpers.authenticateWinOrUnixOrMacUser();
+
+/* use Kerberos login module with IPK realm and kdc */
+Subject ipkSubject = EdalHelpers.authenticateIPKKerberosUser("username");
+/* use Google+ login module */
+Subject googleSubject = EdalHelpers.authenticateNewGoogleUser("httpProxyHost", httpProxyPort);
+
+/* use ORCID login module */
+Subject orcidSubject = EdalHelpers.authenticateORCIDUser("httpProxyHost", httpProxyPort);
+```
+
+</TabItem> <TabItem label="Create entity">
+
+Example: how to create a new PrimaryDataDirectory or PrimaryDataFile.
+
+```java
+PrimaryDataDirectory rootDirectory = DataManager.getRootDirectory(mountPoint, mySubject);
+/* create new sub directory */
+PrimaryDataDirectory myDirectory = rootDirectory.createPrimaryDataDirectory("directory");
+
+/* create new file in sub directory */
+PrimaryDataFile myFile = myDirectory.createPrimaryDataFile("file");
+
+```
+
+</TabItem> <TabItem label="Metadata">
+
+Example: how to get the MetaData object and set metadata values (which will generate a new version):
+
+```java
+/* output of a PrimaryDataDirectory */
+MetaData directoryMetaData = myDirectory.getMetaData();
+System.out.println(directoryMetaData);
+
+/* output of a PrimaryDataFile */
+MetaData fileMetaData = myFile.getMetaData();
+System.out.println(fileMetaData);
+
+/* create new MetaData object from ImplementationProvider or get Metadata from existing entity */
+MetaData metadata = myImplementationProvider.createMetaDataInstance();
+MetaData metadata2 = myEntity.getMetaData();
+
+/* set new metadata values */
+metadata.setElementValue(EnumDublinCoreElements.TITLE, new UntypedData("The e!DAL API"));
+metadata.setElementValue(EnumDublinCoreElements.DESCRIPTION, new UntypedData("e!DAL Poster"));
+
+/* applying metadata generates a new version */
+myEntity.setMetaData(metadata);
+
+```
+
+</TabItem> <TabItem label="Versions">
+
+Creating or changing metadata will generate versions. Example (similar to above):
+
+```java
+/* create new MetaData object from ImplementationProvider or get Metadata from existing entity */
+MetaData metadata = myImplementationProvider.createMetaDataInstance();
+MetaData metadata2 = myEntity.getMetaData();
+
+/* set new metadata values */
+metadata.setElementValue(EnumDublinCoreElements.TITLE, new UntypedData("The e!DAL API"));
+metadata.setElementValue(EnumDublinCoreElements.DESCRIPTION, new UntypedData("e!DAL Poster"));
+
+/* applying metadata generates a new version */
+myEntity.setMetaData(metadata);
+```
+
+</TabItem> <TabItem label="Store">
+
+Example: how to store a data stream to a PrimaryDataFile (storing creates a new version automatically):
+
+```java
+/* create new PrimaryDataFile */
+PrimaryDataFile file = rootDirectory.createPrimaryDataFile("file");
+File inputFile = new File("text_file.txt");
+FileInputStream in = new FileInputStream(inputFile);
+
+/* store data stream of "text_file.txt" — this creates a new version of the PrimaryDataFile 'file' */
+file.store(in);
+```
+
+</TabItem> <TabItem label="Read">
+Example: how to read the data stream of a PrimaryDataFile:
+
+```java
+/* get PrimaryDataFile */
+PrimaryDataFile file = (PrimaryDataFile) rootDirectory.getPrimaryDataEntity("file");
+File outputFile = new File("output_file.txt");
+FileOutputStream out = new FileOutputStream(outputFile);
+
+/* read data stream of the latest version of PrimaryDataFile 'file' and save data to "output_file.txt" */
+file.read(out);
+
+```
+
+</TabItem> <TabItem label="Search">
+
+Examples for search API calls:
+
+```java
+/* search for a specified object name */
+List<PrimaryDataEntity> results = directory.searchByDublinCoreElement(
+    EnumDublinCoreElements.TITLE,
+    new UntypedData("*my_title*"),
+    true,
+    true);
+
+/* search over a complete MetaData set */
+List<PrimaryDataEntity> results2 = directory.searchByMetaData(myMetaData, true, true);
+
+/* search for a specified publication status */
+List<PrimaryDataEntity> results3 = directory.searchByPublicationStatus(PublicationStatus.ACCEPTED);
+
+/* search for a specified keyword */
+List<PrimaryDataEntity> results4 = directory.searchByKeyword("my_keyword", true, true);
+```
+
+</TabItem> <TabItem label="Full Example">
+
+Below is a compacted sequence showing mount → create → metadata → store → read:
+
+```java
+EdalConfiguration configuration = new EdalConfiguration("", "", "10.5072",
+    new InternetAddress("scientific_reviewer@mail.com"),
+    new InternetAddress("substitute_reviewer@mail.com"),
+    new InternetAddress("managing_reviewer@mail.com"),
+    new InternetAddress("root@mail.com"));
+
+PrimaryDataDirectory rootDirectory = DataManager.getRootDirectory(
+    EdalHelpers.getFileSystemImplementationProvider(false, configuration),
+    EdalHelpers.authenticateWinOrUnixOrMacUser());
+
+PrimaryDataDirectory myDirectory = rootDirectory.createPrimaryDataDirectory("directory");
+PrimaryDataFile myFile = myDirectory.createPrimaryDataFile("file");
+
+MetaData metadata = myImplementationProvider.createMetaDataInstance();
+metadata.setElementValue(EnumDublinCoreElements.TITLE, new UntypedData("The e!DAL API"));
+myEntity.setMetaData(metadata);
+
+File inputFile = new File("text_file.txt");
+FileInputStream in = new FileInputStream(inputFile);
+myFile.store(in);
+
+File outputFile = new File("output_file.txt");
+FileOutputStream out = new FileOutputStream(outputFile);
+myFile.read(out);
+
+```
+
+</TabItem> </Tabs>
+
+## Examples for Publication Workflow
+
+<Tabs> <TabItem label="Set metadata">
+
+Set the needed metadata attributes for the data entities you want to publish.
+
+```java 
+MetaData metadata = directory.getMetaData();
+
+// creator
+metadata.setElementValue(EnumDublinCoreElements.CREATOR,
+    new NaturalPerson("Daniel", "Arend", "Gatersleben", "06566", "Germany"));
+
+// publisher
+metadata.setElementValue(EnumDublinCoreElements.PUBLISHER,
+    new LegalPerson("IPK Gatersleben", "Gatersleben", "06466", "Germany"));
+metadata.setElementValue(EnumDublinCoreElements.SUBJECT,
+    new UntypedData("roots, hordeum vulgare, protein analysis, salinity stress"));
+
+// set the new (changed) metadata
+directory.setMetaData(metadata);
+
+```
+
+</TabItem> <TabItem label="Request publication">
+Example: how to request the publication of a data entity (file/directory)
+
+```java
+// add a DOI reference; note: an entity may have several different public resolvable references
+directory.addPublicReference(PersistentIdentifier.DOI);
+
+// apply to publish all references
+directory.getCurrentVersion().setAllReferencesPublic(new InternetAddress("applicant@mail.de"));
+
+```
+
+</TabItem> <TabItem label="Print assigned ID">
+
+Example: waiting for application result & printing assigned DOI/URL.
+
+```java
+// wait for application result
+JOptionPane.showMessageDialog(null, "Continue");
+// or basically continue with your code, because the applicant will get informed by email
+
+// print the DOI and the URL
+System.out.println(directory.getCurrentVersion().getPublicReference(PersistentIdentifier.DOI));
+```
+
+</TabItem> <TabItem label="Full Example">
+
+Combined example:
+
+```java
+MetaData metadata = directory.getMetaData();
+
+// creator
+metadata.setElementValue(EnumDublinCoreElements.CREATOR,
+    new NaturalPerson("Daniel", "Arend", "Gatersleben", "06566", "Germany"));
+
+// publisher
+metadata.setElementValue(EnumDublinCoreElements.PUBLISHER,
+    new LegalPerson("IPK Gatersleben", "Gatersleben", "06466", "Germany"));
+metadata.setElementValue(EnumDublinCoreElements.SUBJECT,
+    new UntypedData("roots, hordeum vulgare, protein analysis, salinity stress"));
+
+// set the new metadata
+directory.setMetaData(metadata);
+
+// request publication
+directory.addPublicReference(PersistentIdentifier.DOI);
+directory.getCurrentVersion().setAllReferencesPublic(new InternetAddress("applicant@mail.de"));
+
+// wait for application result and print DOI/URL
+JOptionPane.showMessageDialog(null, "Continue");
+System.out.println(directory.getCurrentVersion().getPublicReference(PersistentIdentifier.DOI));
+
+```
+
+</TabItem> </Tabs>
+
+## Examples for Server-Client functionality
+
+<Tabs> <TabItem label="Start server">
+
+The initiation of an e!DAL server instance is very similar to running a local e!DAL instance. You additionally add some RMI-related parameters.
+
+```java
+/* construct a default EdalConfiguration */
+EdalConfiguration configuration = new EdalConfiguration(
+    "dataCiteUserName", "dataCitePassword", "dataCitePrefix",
+    new InternetAddress("scientificReviewer@mail.de"),
+    new InternetAddress("substituteReviewer@mail.de"),
+    new InternetAddress("managingReviewer@mail.de"),
+    new InternetAddress("root@mail.de"));
+
+/* startup server using parameter from EdalConfiguration and data/registry TCP port,
+   flag to clean existing mount point or re-mount, and flag to activate/deactivate RMI logger */
+EdalServer.startServer(configuration,
+    EdalServer.REGISTRY_PORT,
+    EdalServer.DATA_PORT,
+    false,
+    true);
+
+```
+
+</TabItem> 
+<TabItem label="Connect client">
+
+After starting the e!DAL server, a client can connect to the server using the DataManagerClient as proxy. As parameter, an Authentication object must be provided, which holds all necessary authentication token. Over RMI you can use the same functions as provided in the standalone version.
+
+```java
+
+/* construct an Authentication object, which holds all required authentication information */
+Authentication auth = new Authentication(EdalHelpers.authenticateWinOrUnixUser());
+
+/* connect client with e!DAL server; specify server port, server name and the authentication object */
+DataManagerClient client = new DataManagerClient(1099, "remotehost", auth);
+
+/* get root directory */
+ClientPrimaryDataDirectory rootDirectory = client.getRootDirectory();
+```
+
+</TabItem>
+</Tabs>
+
