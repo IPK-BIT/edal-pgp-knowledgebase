@@ -47,5 +47,3 @@ Responding quickly and thoroughly to revision requests significantly speeds up t
 ## Next Steps
 
 Once your revision is accepted (or if no revision was needed), you will receive the final decision email.
-
-[Revision Response](./revision-response)

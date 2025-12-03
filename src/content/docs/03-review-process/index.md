@@ -40,5 +40,3 @@ The curation team evaluates the submission based on three main pillars:
 ## Next Steps
 
 Once the review is initiated, the system triggers the first communication to the user.
-
-[Confirmation Email](../confirmation-email)

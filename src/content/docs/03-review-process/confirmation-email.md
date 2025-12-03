@@ -33,5 +33,3 @@ Simultaneously, this email alerts the **IPK Data Stewardship Team**.
 ## Next Steps
 
 Once the review team picks up your submission, they will evaluate it against the criteria mentioned in the previous step. You will be notified via email if any changes are required.
-
-[Revision](./revision)
