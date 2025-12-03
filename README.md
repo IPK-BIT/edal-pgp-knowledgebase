@@ -9,7 +9,7 @@ Most custom components and styling were reused from the [DataPLANT Knowledge Bas
 
 ## Contribution
 
-Please check the [contribution guide](https://github.com/nfdi4plants/nfdi4plants.knowledgebase/blob/main/CONTRIBUTING.md).
+Please check the [contribution guide](./CONTRIBUTING.md).
 
 ## License
 
