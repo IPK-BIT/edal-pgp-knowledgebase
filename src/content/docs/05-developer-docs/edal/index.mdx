@@ -5,6 +5,7 @@ sidebar:
   order: 0
 ---
 
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
 e!DAL – electronic Data Archive Library
 
@@ -12,3 +13,56 @@ share your data – get visible – keep local control
 
 e!DAL is a free software infrastructure to FAIRly maintain and publish in-house stored research data.
 
+<CardGrid>
+
+  <Card title="Submission & Reviewing" icon="pencil">
+    e!DAL provides a convenient submission tool with an embedded review process 
+    and login via [ELIXIR AAI](https://www.elixir-europe.org/services/compute/aai) 
+    to publish research data as [DOI](https://www.datacite.org/) citable dataset.
+  </Card>
+
+  <Card title="FAIR Compatible" icon="sun">
+    e!DAL supports the [FAIR](https://edal.ipk-gatersleben.de/dx.doi.org/10.1038/sdata.2016.18) 
+    principles and requirements from funding agencies and journals. It supports 
+    metadata standards like [DublinCore](http://dublincore.org/) or 
+    [Schema.org](http://schema.org/).
+  </Card>
+
+  <Card title="Information Retrieval" icon="magnifier">
+    e!DAL comprises several powerful and index-based search functions, which 
+    allow efficient information retrieval over the metadata.
+  </Card>
+
+  <Card title="Comprehensive Reporting" icon="open-book">
+    e!DAL provides comprehensive reporting of key performance indicators such 
+    as access counts, data download volume, and client location.
+  </Card>
+
+  <Card title="API Support" icon="setting">
+    e!DAL provides a Java compatible API for remote access or a direct tool 
+    embedding. The plugin concept enables customization of backend components.
+  </Card>
+
+  <Card title="Data Linkage" icon="star">
+    e!DAL is designed to support [JSON-LD](https://json-ld.org/), 
+    [OAI-PMH](https://www.openarchives.org/OAI/openarchivesprotocol.html) and 
+    [ORCID](https://orcid.org/) allowing data harvesting and easy linkage 
+    across global services.
+  </Card>
+
+  <Card title="Version Tracking" icon="random">
+    e!DAL tracks the version history of all stored data objects to make the 
+    whole research process transparent and reproducible.
+  </Card>
+
+  <Card title="Integrated HTTP(S) Server" icon="external">
+    e!DAL contains an embedded web server providing comprehensive pages for 
+    public data access including content negotiation and compressed downloads.
+  </Card>
+
+  <Card title="Storage Orchestration" icon="cloud-download">
+    e!DAL orchestrates pre-existing local file storage and an embedded metadata 
+    database toward a comprehensive, big-data-aware storage backend.
+  </Card>
+
+</CardGrid>
