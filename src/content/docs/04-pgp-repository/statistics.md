@@ -5,7 +5,7 @@ sidebar:
   order: 3
 ---
 
-In e!Dal's [Request – Statistics page](https://doi.ipk-gatersleben.de/report), you can find a compact overview about the accesses and downloads of all stored datasets.
+In e!Dal-PGP's [Request – Statistics page](https://doi.ipk-gatersleben.de/report), you can find a compact overview about the accesses and downloads of all stored datasets.
 For each dataset record, the following statistics are available:
   
   - The number of **Distinct IPs** by which a record was downloaded
