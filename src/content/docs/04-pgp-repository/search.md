@@ -1,5 +1,5 @@
 ---
-title: edal-PGP Search
+title: e!Dal-PGP Search
 lastUpdated: 2025-12-02
 sidebar:
   order: 1
