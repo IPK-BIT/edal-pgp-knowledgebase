@@ -1,10 +1,12 @@
 ---
-title: edal-PGP Statistics
+title: Overview & Statistics
 lastUpdated: 2025-12-02
 sidebar:
   order: 3
 ---
 
-### Statistics
+You can see a compact overview about the accesses and downloads of all stored datasets [here](https://doi.ipk-gatersleben.de/report).
 
-https://doi.ipk-gatersleben.de/report
+
+
+
