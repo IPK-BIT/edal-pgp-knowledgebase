@@ -38,12 +38,9 @@ export default defineConfig({
 				starlightImageZoom(),
     	],
 			sidebar: [
-					{ label: 'Contribution',
-          items: [
-            { label: 'Example page with features', link: 'for-contributors/' }, // 👈 Add your page here
-          ]},
 				{
 					label: 'About',
+					collapsed: true,
 					autogenerate: { directory: '01-about' },
 				},
 				{
@@ -52,6 +49,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Review Process',
+					collapsed: true,
 					autogenerate: { directory: '03-review-process' },
 				},
 				{
@@ -60,6 +58,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Developer Docs',
+					collapsed: true,
 					badge: { text: 'For Developers', variant: 'note' },
 					autogenerate: { directory: '05-developer-docs' },
 				},
