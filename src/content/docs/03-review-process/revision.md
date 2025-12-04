@@ -2,6 +2,8 @@
 title: Revision
 description: Understand the review criteria and how to handle revision requests to ensure your dataset meets e!DAL-PGP quality standards.
 lastUpdated: 2025-12-02
+authors:
+  - sebastian-beier
 sidebar:
   label: Revision
   order: 3

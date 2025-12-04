@@ -2,6 +2,8 @@
 title: Revision Response
 description: Understand the outcomes of the review process, including rejection, acceptance, and how to finalize your DOI.
 lastUpdated: 2025-12-02
+authors:
+  - sebastian-beier
 sidebar:
   label: Revision Response
   order: 4

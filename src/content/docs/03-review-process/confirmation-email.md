@@ -2,6 +2,8 @@
 title: Confirmation Email
 lastUpdated: 2025-12-02
 description: What to expect immediately after submitting your dataset to e!DAL-PGP.
+authors:
+  - sebastian-beier
 sidebar:
   label: Confirmation Email
   order: 2

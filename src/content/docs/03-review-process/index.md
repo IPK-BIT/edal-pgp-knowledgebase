@@ -2,6 +2,8 @@
 title: Review Process
 lastUpdated: 2025-12-02
 description: Details on the internal technical and scientific review performed by the IPK curation team.
+authors:
+  - sebastian-beier
 sidebar:
   label: Review Process
   order: 1
