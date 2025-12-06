@@ -15,7 +15,6 @@ Dr. Matthias Lange
 ## Software & Technical Engineering
 
 Dr. Daniel Arend
-
 - Email: daniel.arend@ipk-gatersleben.de
 - ORCID: [0000-0002-2455-5938](http://orcid.org/0000-0002-2455-5938)
 - [GoogleScholar](https://scholar.google.de/citations?user=557l1mUAAAAJ&hl=de)
