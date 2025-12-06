@@ -1,6 +1,6 @@
 # Contribution Guide
 
-Your contribution to the e!Dal-PGP Knowledge Base is highly appreciated. This guide is intended to show you how to contribute new articles and tutorials or review and adapt parts of existing ones. For changes and suggestions, feel free to open a GitHub issue or pull request.
+Your contribution to the e!DAL-PGP Knowledge Base is highly appreciated. This guide is intended to show you how to contribute new articles and tutorials or review and adapt parts of existing ones. For changes and suggestions, feel free to open a GitHub issue or pull request.
 
 - [Setup](#setup)
   - [Installation](#installation)
@@ -18,7 +18,7 @@ Your contribution to the e!Dal-PGP Knowledge Base is highly appreciated. This gu
 
 ## Setup
 
-The e!Dal-PGP Knowledge Base is built on [astro starlight](https://starlight.astro.build). 
+The e!DAL-PGP Knowledge Base is built on [astro starlight](https://starlight.astro.build). 
 Additional custom components and styling were reused from https://github.com/nfdi4plants/nfdi4plants.knowledgebase create by [Kevin Freymaurer](https://github.com/Freymaurer). Many features not covered here specifically may be found in their docs.
 
 Starlight itself builds on [Astro](https://astro.build). Please check out [their website](https://docs.astro.build/en/install-and-setup/) for detailed installation instructions.

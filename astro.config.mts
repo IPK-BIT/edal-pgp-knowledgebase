@@ -16,7 +16,7 @@ export default defineConfig({
 	integrations: [
 		icon(), 
 		starlight({
-			title: 'e!dal-PGP Knowledge Base',
+			title: 'e!DAL-PGP Knowledge Base',
 			favicon: "favicon.png",
 			customCss: [
       // Relative path to your custom CSS file
