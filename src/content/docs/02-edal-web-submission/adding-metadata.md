@@ -3,38 +3,43 @@ title: Step 2 - Adding Basic Information
 lastUpdated: 2025-12-04
 authors:
   - sebastian-beier
+  - daniel-arend
 sidebar:
   order: 2
 ---
 
-After logging in and selecting your files, the e!DAL web wizard will guide you through the metadata provision process. This step is important to ensure your data is **FAIR** (Findable, Accessible, Interoperable, and Reusable).
+### Basic Metadata
 
-High-quality metadata ensures that your dataset can be found by search engines (like Google Dataset Search) and correctly cited by other researchers.
+After logging in and accepting the DLA, the dialog will guide you through the metadata provision process. This step is important to ensure your data is **FAIR**-compliant.
 
-## Step 2: Basic Information
+The metadata ensures all datasets can be found by search engines and correctly cited by other researchers.
+
+### Step 2: Basic Information
 
 In this step, you are required to provide the core details of your dataset.
 
 ![](@images/pgp-repository/web-client-2.png)
 
-### 1. Dataset Title
+#### 1. Dataset Title
 
-The title should be descriptive and unique. It is the first thing users see.
+The title should be descriptive and unique. It should decribe the concrete datasets and not the corresponding research paper.
+It is the first thing users see.
 
-* **Good:** *Raw phenotyping image data for "Drought stress response in winter wheat" (2023)*
-* **Bad:** *Data.zip* or *Supplementary Material*
+* **Good:** *"Raw phenotyping image data for drought stress response in winter wheat" (2023)*
+* **Bad:** *"Data.zip"* or *"Supplementary Material for my wheat paper"*
 
-:::tip[Naming Convention]
-If your data belongs to a specific publication, it is good practice to include a reference to the topic or the paper title in the dataset title, e.g., *"Supplementary Dataset for: [Paper Title]"*.
-:::
-
-### 2. Description
+#### 2. Description
 
 Provide a comprehensive summary of the dataset. This text appears on the landing page of your DOI.
 
 * Describe **what** the data is (e.g. *genomic sequences, microscope images*).
 * Describe **how** it was generated (methodology).
 * Mention technical details like file formats or specific software versions used.
+
+-- :::tip[Naming Convention]
+-- If your data belongs to a specific publication, it is good practice to include a reference to the topic or the 
+-- paper title in the dataset title, e.g., *"Supplementary Dataset for: [Paper Title]"*.
+-- :::
 
 :::caution[Abstracts]
 Do not simply copy-paste the abstract of your research paper unless the dataset covers exactly the same scope. The dataset description should focus on the **data files** themselves.
