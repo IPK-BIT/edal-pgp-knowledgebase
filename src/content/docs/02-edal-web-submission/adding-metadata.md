@@ -14,10 +14,6 @@ After logging in and accepting the DLA, the dialog will guide you through the me
 
 The metadata ensures all datasets can be found by search engines and correctly cited by other researchers.
 
-### Step 2: Basic Information
-
-In this step, you are required to provide the core details of your dataset.
-
 ![](@images/pgp-repository/web-client-2.png)
 
 #### 1. Dataset Title
@@ -54,6 +50,6 @@ You must select a Creative Commons license to define how others can use your dat
 * **Default:** `CC BY 4.0` (Creative Commons Attribution) is the standard for open research data. It allows others to use your data as long as they cite you.
 * **Software:** If you are uploading code, consider if a software license (like MIT or GPL) is more appropriate, though CC BY is standard for the PGP repository.
 
-## Next Steps
+### Next Steps
 
 Once you have provided all basic information, proceed to the **Creators** step to specify the authors of the dataset.

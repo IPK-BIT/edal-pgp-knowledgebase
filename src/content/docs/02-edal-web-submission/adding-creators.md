@@ -8,7 +8,7 @@ sidebar:
   order: 3
 ---
 
-In step of the submission, you list the individuals who created and contributed to the dataset. Correctly identifying authors ensures that everyone receives proper credit and that your data can be cited accurately.
+In this step of the submission, you list the individuals who created and contributed to the dataset. Correctly identifying authors ensures that everyone receives proper credit and that your data can be cited accurately.
 
 ### Managing Authors
 
@@ -32,8 +32,8 @@ When adding or editing an author, you will be presented with the following field
 
 #### Author Role
 Select the appropriate role for the individual:
-* **Creator:** The main researchers involved in producing the data. These names will appear in the primary citation of the dataset.
-* **Contributor:** Individuals who helped (e.g., data curation, technical support) but are not primary authors.
+* **Creator:** Main researchers involved in producing the data. They will appear in the citation of the dataset.
+* **Contributor:** Individuals who helped (e.g., data curation, technical support).
 
 #### ORCID (Open Researcher and Contributor ID)
 Entering an ORCID iD is required to uniquely identifiy authors across the global research ecosystem.
@@ -47,11 +47,11 @@ Entering an ORCID iD is required to uniquely identifiy authors across the global
 Use the **"Sync signed in user info"** button to populate these fields with your own account details.
 :::
 
-### 4. Affiliation & ROR ID
+### 4. Affiliation
 You must provide the institutional affiliation for every author.
-* **ROR ID:** The Research Organization Registry ID for the institution (e.g. `https://ror.org/05gq02987`). This helps standardise institutional names.
+<!--* **ROR ID:** The Research Organization Registry ID for the institution (e.g. `https://ror.org/05gq02987`). This helps standardise institutional names.-->
 * **Affiliation Name:** The full name of the institution (e.g. *Brown University*).
 
-## Next Steps
+### Next Steps
 
 Once you have added all authors and their roles, click **Next** to proceed to the data upload.
