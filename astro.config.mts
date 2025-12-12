@@ -53,7 +53,7 @@ export default defineConfig({
 					autogenerate: { directory: '03-review-process' },
 				},
 				{
-					label: 'The PGP repository',
+					label: 'The e!DAL-PGP repository',
 					autogenerate: { directory: '04-pgp-repository' },
 				},
 				{

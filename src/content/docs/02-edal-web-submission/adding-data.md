@@ -18,8 +18,7 @@ This is the standard method for most users. You can upload your local files or d
 
 1. **Select Files:** Click the **"Select files"** button to open a file picker.
 2. **Verify Uploads:** After selection, your files will appear in a table showing:
-    * **Name:** The filename.
-    * **Relative Path:** Verify your folder structure is preserved
+    * **Name & Relative Path** Verify your files & folder structure is preserved
     * **File Type & Size:** To help you spot any incorrect files.
 
 :::tip[Folder Structures]
@@ -28,32 +27,26 @@ To upload complete folder structures while maintaining sub-directories (as seen 
 
 #### Avoid Pre-Zipping
 :::danger[Do not upload ZIP files]
-Please upload your **folders and files directly** rather than wrapping them in a single `.zip` or `.tar` archive.
+Upload your **folders & files directly** rather than wrapping them in a `.zip` or `.tar` archive.
 
 * **Why?** e!DAL allows users to browse, filter, and preview individual files online. If you upload a giant zip file, users must download the entire thing to see one file.
-* **Exception:** You may zip specific sub-directories if they contain thousands of tiny files that belong strictly together (e.g. a specific log dump), but generally, open structures are preferred.
+* **Exception:** You may zip specific files, if they are common for a dedicated tool ecosystem, but generally, open structures are preferred.
 :::
 
 ### S3 Access
 
-If your data is already hosted in an S3-compatible object store (e.g. AWS S3, MinIO, or institutional cloud storage), use the **S3 Access** tab. This allows you to transfer data directly without downloading it to your local machine first.
+If your data is too large to be transfered via browser (>500 MB)/>1000 files) just put it on a S3-compatible object store (e.g. AWS S3, MinIO, or institutional cloud storage) and provide the subseqently explained access parameters in the **S3 Access** tab. This allows you to transfer data directly into the repository.
 
-To connect your bucket, provide the following connection details:
-
-* **Service Endpoint:** The URL of your S3 provider (e.g. `s3.amazonaws.com` or your institutional endpoint).
+* **Service Endpoint:** The URL of your S3 provider (e.g. `s3.amazonaws.com`).
 * **Access Key ID:** Your public identifier.
 * **Secret Access Key:** Your private key (used only for the transfer and not stored permanently).
 * **Bucket Name:** The exact name of the source bucket.
+* **Region Name:** The name of region where your bucket physically resides.
 
 :::tip[Permissions]
-Ensure your S3 credentials have `ListBucket` and `GetObject` permissions so the e!DAL importer can read the file structure and download the objects.
+If the conenction test failed, please ensure that your S3 credentials have `ListBucket` and `GetObject` permissions so the e!DAL importer can read the file structure and download the objects.
 :::
 
 ## Finalizing Submission
 
-Once your files are listed correctly in the table:
-
-1. Review the file list one last time to ensure nothing is missing.
-2. Click the **Finish** button at the bottom right.
-
-This will complete the wizard and send your dataset to the internal review team.
+Once your files are listed correctly in the table, please review the file list one last time to ensure nothing is missing and click the **Finish** button at the bottom right to start the dataset submission and intiating the internal review team.
