@@ -14,29 +14,29 @@ import react from '@astrojs/react';
 export default defineConfig({
 	base: '/edal-pgp-knowledgebase',
 	integrations: [
-		icon(), 
+		icon(),
 		starlight({
 			title: 'e!DAL-PGP Knowledge Base',
 			favicon: "favicon.png",
 			customCss: [
-      // Relative path to your custom CSS file
-      './src/styles/tailwind.css',
-      './src/styles/custom.css',
-    ],
-    components: {
-      MarkdownContent: '@components/starlight/MarkdownContent.astro',
-      Footer: '@components/starlight/Footer.astro',
-    },
-    editLink: {
-      baseUrl: 'https://github.com/IPK-BIT/edal-pgp-knowledgebase/edit/main/'
-    },
-			social: {
-      	github: 'https://github.com/IPK-BIT/edal-pgp-knowledgebase',
-    	},
+				// Relative path to your custom CSS file
+				'./src/styles/tailwind.css',
+				'./src/styles/custom.css',
+			],
+			components: {
+				MarkdownContent: '@components/starlight/MarkdownContent.astro',
+				Footer: '@components/starlight/Footer.astro',
+			},
+			editLink: {
+				baseUrl: 'https://github.com/IPK-BIT/edal-pgp-knowledgebase/edit/main/'
+			},
+			social: [
+				{ icon: 'github', href: 'https://github.com/IPK-BIT/edal-pgp-knowledgebase', label: 'GitHub' },
+			],
 			plugins: [
 				starlightLinksValidator(),
 				starlightImageZoom(),
-    	],
+			],
 			sidebar: [
 				{
 					label: 'About',
@@ -63,21 +63,21 @@ export default defineConfig({
 					autogenerate: { directory: '05-developer-docs' },
 				},
 			],
-    expressiveCode: {
-      defaultProps: {
-        // Enable wrap for specific languages
-        overridesByLang: {
-          'txt,md,bash': { wrap: true },
-        },
-      },
-    },
-  }),
-	tailwind({
-    // Disable the default base styles:
-    applyBaseStyles: false,
-  }),
-	react()],
-  markdown: {
-    rehypePlugins: [rehypeSlug, ...rehypeAutolink()],
-  },
+			expressiveCode: {
+				defaultProps: {
+					// Enable wrap for specific languages
+					overridesByLang: {
+						'txt,md,bash': { wrap: true },
+					},
+				},
+			},
+		}),
+		tailwind({
+			// Disable the default base styles:
+			applyBaseStyles: false,
+		}),
+		react()],
+	markdown: {
+		rehypePlugins: [rehypeSlug, ...rehypeAutolink()],
+	},
 });
