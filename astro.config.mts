@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightOpenAPI, { openAPISidebarGroups } from 'starlight-openapi'
 import rehypeSlug from 'rehype-slug';
 import { rehypeAutolink } from './plugins/rehype-autolink';
 import tailwind from '@astrojs/tailwind';
@@ -36,6 +37,12 @@ export default defineConfig({
 			plugins: [
 				starlightLinksValidator(),
 				starlightImageZoom(),
+				starlightOpenAPI([
+					{
+					base: 'api',
+					schema: 'src/schemas/api-schema.yaml',
+					},
+				]),
 			],
 			sidebar: [
 				{
@@ -62,6 +69,7 @@ export default defineConfig({
 					badge: { text: 'For Developers', variant: 'note' },
 					autogenerate: { directory: '05-developer-docs' },
 				},
+				...openAPISidebarGroups,
 			],
 			expressiveCode: {
 				defaultProps: {
