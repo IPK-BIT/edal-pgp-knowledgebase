@@ -1,0 +1,349 @@
+openapi: 3.0.0
+info:
+  title: e!DAL API
+  version: 0.0.0
+  description: OpenAPI specification of the e!DAL REST API endpoints.
+  contact:
+    name: Daniel Arend
+    email: arendd@ipk-gatersleben.de
+servers:
+  - url: https://dmz-web-169.ipk-gatersleben.de
+    description: Test Server
+tags:
+  - name: Submission
+    description: Submission related endpoints.
+  - name: Search
+    description: Search related endpoints.
+paths:
+  /submission/info/exists:
+    get:
+      operationId: info_exists
+      tags:
+        - Submission
+      description: Check if a dataset with a specific title already exists for the
+        authenticated user
+      parameters:
+        - $ref: "#/components/parameters/authorizationHeader"
+        - description: lorem
+          in: query
+          name: title
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Dataset with the title exists for the user
+          content:
+            text/text:
+              schema:
+                type: string
+        "204":
+          description: Datset with the title does not exist for the user
+          content:
+            text/text:
+              schema:
+                type: string
+  /submission/upload/s3check:
+    post:
+      operationId: test_connection
+      tags:
+        - Submission
+      description: Test if a connection is possible with the provided credentials
+      parameters:
+        - $ref: "#/components/parameters/authorizationHeader"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/s3Access"
+      responses:
+        "200":
+          description: Connection was successful
+          content:
+            text/text:
+              schema:
+                type: string
+        "400":
+          description: Connection was unsuccessful
+          content:
+            text/html:
+              schema:
+                type: string
+  /submission/upload/s3upload:
+    post:
+      operationId: uploadS3
+      tags:
+        - Submission
+      description: Upload a dataset using a s3 bucket
+      parameters:
+        - $ref: "#/components/parameters/authorizationHeader"
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                metadata:
+                  $ref: "#/components/schemas/metadata"
+                s3Access:
+                  $ref: "#/components/schemas/s3Access"
+      responses:
+        "200":
+          description: s3 submission started successfully
+  /submission/upload/dataset:
+    post:
+      operationId: uploadLocalFile
+      tags:
+        - Submission
+      description: Upload of a local file
+      parameters:
+        - $ref: "#/components/parameters/authorizationHeader"
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              properties:
+                metadata:
+                  $ref: "#/components/schemas/metadata"
+                file:
+                  type: string
+                  format: binary
+                path:
+                  type: string
+      responses:
+        "200":
+          description: File uploaded successfully
+  /rest/extendedSearch/drillDown:
+    post:
+      operationId: retrieveFacets
+      description: Retrieve facet information
+      tags:
+        - Search
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/searchBody"
+      responses:
+        "200":
+          description: Successful facet retrieval
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/facet"
+                type: array
+  /rest/extendedSearch/parsequery:
+    post:
+      operationId: parseQuery
+      description: Parse facet object into lucene query string
+      tags:
+        - Search
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                fuzzy:
+                  type: boolean
+                occur:
+                  type: string
+                searchterm:
+                  type: string
+                type:
+                  type: string
+      responses:
+        "200":
+          description: Sucessful request.
+          content:
+            text/text:
+              schema:
+                type: string
+  /rest/extendedSearch/search:
+    post:
+      operationId: searchDatasets
+      description: search endpoint
+      tags:
+        - Search
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/searchBody"
+      responses:
+        "200":
+          description: successful request
+          content:
+            application/json:
+              schema:
+                properties:
+                  bottomResult:
+                    type: string
+                  bottomResultScore:
+                    type: number
+                  displayedPage:
+                    type: number
+                  facets:
+                    items:
+                      $ref: "#/components/schemas/facet"
+                    type: array
+                  hitSize:
+                    type: number
+                  hitSizeDescription:
+                    type: string
+                  pageArray:
+                    items:
+                      $ref: "#/components/schemas/pageInfo"
+                    type: array
+                  pageIndex:
+                    type: number
+                  results:
+                    items:
+                      $ref: "#/components/schemas/dataset"
+                    type: array
+components:
+  parameters:
+    authorizationHeader:
+      description: |-
+        HTTP HEADER - Token used for Authorization 
+
+        <strong> Bearer {token_string} </strong>
+      example: Bearer XXXX
+      in: header
+      name: Authorization
+      schema:
+        pattern: ^Bearer .*$
+        type: string
+  schemas:
+    author:
+      description: At least one author must have the Creator role.
+      properties:
+        role:
+          enum:
+            - Creator
+            - Contributor
+          type: string
+        orcid:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        affiliation:
+          type: string
+        address:
+          type: string
+        zipCode:
+          type: string
+        country:
+          type: string
+    metadata:
+      description: Metadata object of a dataset submission
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        authors:
+          items:
+            $ref: "#/components/schemas/author"
+          type: array
+        language:
+          type: string
+        subjects:
+          items:
+            type: string
+          type: array
+        license:
+          type: string
+        embargoDate:
+          type: string
+    s3Access:
+      description: s3 endpoint credentials
+      properties:
+        endpoint:
+          type: string
+        region:
+          type: string
+        bucket:
+          type: string
+        accessKey:
+          type: string
+        secretKey:
+          type: string
+    facetValue:
+      properties:
+        label:
+          type: string
+        value:
+          type: number
+    facet:
+      properties:
+        sortedByHits:
+          items:
+            $ref: "#/components/schemas/facetValue"
+          type: array
+        category:
+          type: string
+    searchBody:
+      description: Search request body for drilldown or search
+      properties:
+        bottomResultId:
+          type: string
+        displayedPage:
+          type: number
+        exisitingQuery:
+          type: string
+        filters:
+          items:
+            type: string
+          type: array
+        hitType:
+          enum:
+            - dataset
+            - file
+            - directory
+          type: string
+        pageArraySize:
+          type: number
+        pageIndex:
+          type: number
+        pageSize:
+          type: number
+        pagination:
+          items:
+            type: object
+          type: array
+        queries:
+          items:
+            type: string
+          type: array
+        whereToSearch:
+          enum:
+            - Metadata
+            - Content
+          type: string
+    pageInfo:
+      description: Pagination page reference
+      properties:
+        bottomResult:
+          type: string
+        bottomResultScore:
+          type: number
+        index:
+          type: number
+        page:
+          type: number
+    dataset:
+      description: Search result for dataset
+      properties:
+        doi:
+          type: string
+        ext:
+          type: string
+        fileName:
+          type: string
+        title:
+          type: string
+        type:
+          type: string
+        year:
+          type: number
