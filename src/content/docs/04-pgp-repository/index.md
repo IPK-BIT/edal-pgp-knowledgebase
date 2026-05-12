@@ -8,5 +8,5 @@ sidebar:
   order: 0
 ---
 
-This section introduces how to use the [e!Dal-PGP repository](https://edal-pgp.ipk-gatersleben.de/) to find and reuse data and metadata.
+This section introduces how to use the [e!DAL-PGP repository](https://edal-pgp.ipk-gatersleben.de/) to find and reuse data and metadata.
 
