@@ -1,11 +1,11 @@
 ---
-title: e!Dal-PGP Search
+title: e!DAL-PGP Search
 lastUpdated: 2025-12-02
 sidebar:
   order: 1
 ---
 
-In e!Dal-PGP's [search page](https://doi.ipk-gatersleben.de/search) users can search for dataset records.
+In e!DAL-PGP's [search page](https://doi.ipk-gatersleben.de/search) users can search for dataset records.
 
 ![](@images/pgp-repository/pgp_search_1.png)
 
