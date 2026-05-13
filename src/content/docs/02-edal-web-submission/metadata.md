@@ -9,15 +9,13 @@ sidebar:
   order: 2
 ---
 
-### Basic Metadata
-
 After logging in and accepting the DLA, the dialog will guide you through the metadata provision process. This step is important to ensure your data is **FAIR**-compliant.
 
 The metadata ensures all datasets can be found by search engines and correctly cited by other researchers.
 
 ![](@images/pgp-repository/web-client-2.png)
 
-#### 1. Dataset Title
+### 1. Dataset Title
 
 The title should be descriptive and unique. It should decribe the concrete datasets and not the corresponding research paper.
 It is the first thing users see.
@@ -25,7 +23,7 @@ It is the first thing users see.
 * **Good:** *"Raw phenotyping image data for drought stress response in winter wheat" (2023)*
 * **Bad:** *"Data.zip"* or *"Supplementary Material for my wheat paper"*
 
-#### 2. Description
+### 2. Description
 
 Provide a comprehensive summary of the dataset. This text appears on the landing page of your DOI.
 

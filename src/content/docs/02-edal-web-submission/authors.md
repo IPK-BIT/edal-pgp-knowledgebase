@@ -1,8 +1,9 @@
 ---
-title: Step 3 - Adding Creator Information
+title: Step 3 - Author Information
 lastUpdated: 2025-12-04
 authors:
   - sebastian-beier
+  - manuel-feser
   - daniel-arend
 sidebar:
   order: 3
@@ -30,16 +31,16 @@ When adding or editing an author, you will be presented with the following field
 
 ![](@images/pgp-repository/web-client-3.png)
 
-#### Author Role
+### Author Role
 Select the appropriate role for the individual:
 * **Creator:** Main researchers involved in producing the data. They will appear in the citation of the dataset.
 * **Contributor:** Individuals who helped (e.g., data curation, technical support).
 
-#### ORCID (Open Researcher and Contributor ID)
+### ORCID (Open Researcher and Contributor ID)
 Entering an ORCID iD is required to uniquely identifiy authors across the global research ecosystem.
 * **Example:** `0000-0002-1825-0097`
 
-#### Name Fields
+### Name Fields
 * **First Name:** (e.g. *Josiah*)
 * **Last Name:** (e.g. *Carberry*)
 
@@ -47,7 +48,7 @@ Entering an ORCID iD is required to uniquely identifiy authors across the global
 Use the **"Sync signed in user info"** button to populate these fields with your own account details.
 :::
 
-### 4. Affiliation
+### Affiliation
 You must provide the institutional affiliation for every author.
 <!--* **ROR ID:** The Research Organization Registry ID for the institution (e.g. `https://ror.org/05gq02987`). This helps standardise institutional names.-->
 * **Affiliation Name:** The full name of the institution (e.g. *Brown University*).
