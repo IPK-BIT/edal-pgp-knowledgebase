@@ -1,9 +1,9 @@
 ---
 title: Dos and Donts
-lastUpdated: 2026-03-02
+lastUpdated: 2026-05-13
 
 sidebar:
-  order: 1
+  order: 4
 ---
 
 # How to Provide a Dataset Before Submission to Avoid Unnecessary Rejections?
