@@ -22,3 +22,10 @@ btn {
   line-height:1.4;
   white-space:nowrap;
 }
+
+.heading-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  white-space: nowrap;
+}
