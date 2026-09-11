@@ -15,7 +15,7 @@ The metadata ensures all datasets can be found by search engines and correctly c
 
 ![](@images/pgp-repository/web-client-2.png)
 
-### 1. Dataset Title
+### Dataset Title
 
 The title should be descriptive and unique. It should decribe the concrete datasets and not the corresponding research paper.
 It is the first thing users see.
@@ -23,7 +23,7 @@ It is the first thing users see.
 * **Good:** *"Raw phenotyping image data for drought stress response in winter wheat" (2023)*
 * **Bad:** *"Data.zip"* or *"Supplementary Material for my wheat paper"*
 
-### 2. Description
+### Description
 
 Provide a comprehensive summary of the dataset. This text appears on the landing page of your DOI.
 
@@ -42,7 +42,7 @@ paper title in the dataset title, e.g., *"Supplementary Dataset for: [Paper Titl
 Do not simply copy-paste the abstract of your research paper. The dataset description should focus on the **data files** themselves. If your dataset belongs to a specific publication, it is good practice to include a reference to the topic or the paper
 :::
 
-### 3. License
+### License
 
 You must select a Creative Commons license to define how others can use your data.
 

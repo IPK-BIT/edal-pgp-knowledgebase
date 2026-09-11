@@ -19,6 +19,10 @@ export default defineConfig({
 		starlight({
 			title: 'e!DAL-PGP Knowledge Base',
 			favicon: "favicon.png",
+			logo: {
+				src: './src/assets/images/logos/edal.png',
+				alt: 'e!DAL-PGP logo',
+			},
 			customCss: [
 				// Relative path to your custom CSS file
 				'./src/styles/tailwind.css',
