@@ -51,3 +51,16 @@ btn {
 .pub-list li { margin-block: 0; padding-block: 0.35rem; border-bottom: 1px solid var(--sl-color-hairline); }
 .pub-list li > * + * { margin-top: 0; }
 .pub-list .__dimensions_badge_embed__ { display: inline-block; vertical-align: middle; margin-inline-start: 0.5rem; }
+
+/* Wider content area on large screens; smaller screens keep Starlight's defaults */
+@media (min-width: 90rem) {
+  :root {
+    --sl-content-width: 60rem;
+  }
+}
+
+@media (min-width: 120rem) {
+  :root {
+    --sl-content-width: 72rem;
+  }
+}
