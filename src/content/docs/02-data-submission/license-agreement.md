@@ -1,6 +1,7 @@
 ---
 title: Step 1 - License Agreement
 lastUpdated: 2025-12-04
+tableOfContents: false
 sidebar:
   order: 1
 ---

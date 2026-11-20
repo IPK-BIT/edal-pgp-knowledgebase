@@ -63,25 +63,21 @@ export default defineConfig({
 					autogenerate: { directory: '03-review-process' },
 				},
 				{
-					label: 'The e!DAL-PGP repository',
-					autogenerate: { directory: '04-pgp-repository' },
-				},
-				{
 					label: 'Developer Docs',
 					collapsed: true,
 					items: [
-						{ slug: '05-developer-docs/edal' },
-						{ slug: '05-developer-docs/edal/download' },
-						{ slug: '05-developer-docs/edal/developer-info' },
-						{ slug: '05-developer-docs/edal/user-info' },
-						{ slug: '05-developer-docs/edal-web' },
+						{ slug: '04-developer-docs/edal' },
+						{ slug: '04-developer-docs/edal/download' },
+						{ slug: '04-developer-docs/edal/developer-info' },
+						{ slug: '04-developer-docs/edal/user-info' },
 					],
 				},
 				...openAPISidebarGroups,
-				{ slug: '01-about/acknowledgements' },
+				{ slug: 'search' },
+				{ slug: 'acknowledgements' },
 				{ slug: 'publications' },
-				{ slug: '01-about/contact' },
-				{ slug: '05-developer-docs/edal/license-disclaimer' },
+				{ slug: 'contact' },
+				{ slug: 'license-disclaimer' },
 			],
 			expressiveCode: {
 				defaultProps: {

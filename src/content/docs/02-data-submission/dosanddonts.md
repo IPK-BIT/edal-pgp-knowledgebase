@@ -1,7 +1,7 @@
 ---
 title: Do's and Dont's
 lastUpdated: 2026-05-13
-
+tableOfContents: false
 sidebar:
   order: 4
 ---

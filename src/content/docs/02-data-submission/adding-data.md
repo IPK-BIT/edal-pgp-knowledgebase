@@ -1,6 +1,7 @@
 ---
 title: Step 4 - Adding Data
 lastUpdated: 2025-12-04
+tableOfContents: false
 sidebar:
   order: 4
 ---

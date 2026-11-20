@@ -1,6 +1,7 @@
 ---
 title: Step 3 - Author Information
 lastUpdated: 2025-12-04
+tableOfContents: false
 sidebar:
   order: 3
 ---

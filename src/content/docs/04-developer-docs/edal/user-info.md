@@ -1,8 +1,11 @@
 ---
 title: User Information
 lastUpdated: 2025-12-03
+tableOfContents: false
 sidebar:
   order: 3
+prev: false
+next: false  
 ---
 
 <style>
@@ -30,7 +33,7 @@ sidebar:
 </style>
 
 
-## Starting the e!DAL Server
+#### Starting the e!DAL Server
 
 e!DAL use the RMI technology to serve a centralized repository, which allow users to access the system in parallel. The following section show how to initiate the an e!DAL server instance. For starting just run the Java fat-jar and add the mandatory parameter.
 
@@ -42,13 +45,13 @@ java -jar eDAL-Server.jar -dcr 10.5073 -dcu TIB.ABC -dcp password -ru root@email
 If a more complex server configuration, e.g. through a firewall is necessary, add the additional needed parameters listed below.
 :::
 
-## Server parameters
+#### Server parameters
 
 :::note
 Mandatory parameters are marked.
 :::
 
-### RMI parameters
+#### RMI parameters
 
 Mandatory | Option (short) | Option (long) | Description |
 | ----- |----------------|---------------|------------|
@@ -58,14 +61,14 @@ Mandatory | Option (short) | Option (long) | Description |
 |   | `-n` | `--noSsl` | Deactivate SSL for RMI transfer (default: true) |
 |   | `-rmi <arg>` | `--rmiserver <arg>` | Set `java.rmi.server.hostname` (recommended to use dynamic server hostname) |
 
-### Path parameters
+#### Path parameters
 
 Mandatory | Option (short) | Option (long) | Description |
 | ----- |----------------|---------------|------------|
 |   | `-i <arg>` | `--dataPath <arg>` | Path for e!DAL data files (default: `${user.home}/edal`) |
 |   | `-m <arg>` | `--mountPath <arg>` | Path for e!DAL database/index files (default: `${user.home}/edal`) |
 
-### DataCite parameters
+#### DataCite parameters
 
 Mandatory | Option (short) | Option (long) | Description |
 | ----- |----------------|---------------|------------|
@@ -75,7 +78,7 @@ Mandatory | Option (short) | Option (long) | Description |
 |   | `-dif <arg>` | `--doiInfix <arg>` | Specific infix for DOI construction schema |
 
 
-### Database parameters
+#### Database parameters
 
 Mandatory | Option (short) | Option (long) | Description |
 | ----- |----------------|---------------|------------|
@@ -83,7 +86,7 @@ Mandatory | Option (short) | Option (long) | Description |
 |   | `-dp <arg>` | `--DBpass <arg>` | Password for embedded database |
 
 
-### HTTP parameters
+#### HTTP parameters
 
 Mandatory | Option (short) | Option (long) | Description |
 | ----- |----------------|---------------|------------|
@@ -95,7 +98,7 @@ Mandatory | Option (short) | Option (long) | Description |
 |   | `-ss <arg>` | `--staticserver <arg>` | Static server address for HTTP listener |
 |   | `-sp <arg>` | `--staticport <arg>` | Static server port for HTTP listener |
 
-### Proxy parameters
+#### Proxy parameters
 
 Mandatory | Option (short) | Option (long) | Description |
 | ----- |----------------|---------------|------------|
@@ -104,7 +107,7 @@ Mandatory | Option (short) | Option (long) | Description |
 |   | `-hsh <arg>` | `--httpsProxyHost <arg>` | Address for HTTPS proxy |
 |   | `-hsp <arg>` | `--httpsProxyPort <arg>` | Port for HTTPS proxy |
 
-### Email addresses
+#### Email addresses
 
 Mandatory | Option (short) | Option (long) | Description |
 | ----- |----------------|---------------|------------|
@@ -113,7 +116,7 @@ Mandatory | Option (short) | Option (long) | Description |
 | x | `-r3 <arg>` | `--managingReviewer <arg>` | Email for managing reviewer |
 | x | `-ru <arg>` | `--rootUser <arg>` | Email for root user |
 
-### SMTP parameters
+#### SMTP parameters
 
 Mandatory | Option (short) | Option (long) | Description |
 | ----- |----------------|---------------|------------|
@@ -121,7 +124,7 @@ Mandatory | Option (short) | Option (long) | Description |
 |   | `-su <arg>` | `--smtpLogin <arg>` | SMTP username |
 |   | `-sp <arg>` | `--smtpPassword <arg>` | SMTP password |
 
-### Additional parameter
+#### Additional parameter
 
 Mandatory | Option (short) | Option (long) | Description |
 | ----- |----------------|---------------|------------|

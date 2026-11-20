@@ -2,6 +2,8 @@
 title: License & Disclaimer
 lastUpdated: 2025-12-03
 tableOfContents: false
+prev: false
+next: false
 ---
 #### License
 
