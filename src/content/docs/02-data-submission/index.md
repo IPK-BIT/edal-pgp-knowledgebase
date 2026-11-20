@@ -1,9 +1,6 @@
 ---
-title: e!DAL-PGP Web Submission
+title: Web Submission
 lastUpdated: 2026-05-13
-authors:
-  - sebastian-beier
-  - daniel-arend
 sidebar:
   order: 0
 ---

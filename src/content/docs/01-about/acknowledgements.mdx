@@ -3,6 +3,9 @@ title: Acknowledgements
 lastUpdated: 2025-12-02
 sidebar:
   order: 1
+tableOfContents: false
+prev: false
+next: false
 ---
 
 import DPPN from '@images/logos/dppn.jpg'
@@ -10,43 +13,43 @@ import DENBI from '@images/logos/denbi.png'
 import ELIXIRDE from '@images/logos/elixir-germany.png'
 import IPK from '@images/logos/ipk_logo.jpg'
 import TRANSPLANT from '@images/logos/transplant.png'
+import AuthorList from '@components/AuthorList.astro'
 
-<div className="flex flex-col gap-6">
+<div className="ack-list">
 
-  <div className="flex items-center gap-6">
-    <img src={DPPN.src} alt="DPPN logo" className="w-48 flex-shrink-0 object-contain" />
-    <div className="min-w-0">
-      <a href="http://www.dppn.de/dppn/EN/Home/home_node.html" target="_blank" rel="noopener noreferrer" className="font-medium text-blue-600 hover:underline">DPPN</a> – The German Federal Ministry of Education and Research within the German-Plant-Phenotyping Network "DPPN" (FKZ 031A053)
+  <div className="ack-item">
+    <img src={DPPN.src} alt="DPPN logo" />
+    <div className="text">
+      <a href="http://www.dppn.de/dppn/EN/Home/home_node.html" target="_blank" rel="noopener noreferrer">DPPN</a> – The German Federal Ministry of Education and Research within the German-Plant-Phenotyping Network "DPPN" (FKZ 031A053)
     </div>
   </div>
 
-  <div className="flex items-center gap-6">
-    <img src={TRANSPLANT.src} alt="transPLANT logo" className="w-48 flex-shrink-0 object-contain" />
-    <div className="min-w-0">
-      <a href="http://www.transplantdb.eu/" target="_blank" rel="noopener noreferrer" className="font-medium text-blue-600 hover:underline">transPLANT</a> – The European Commission in the transPlant project within its 7th Framework Program, under the thematic area “Infrastructures”, contract number 283496
+  <div className="ack-item">
+    <img src={TRANSPLANT.src} alt="transPLANT logo" />
+    <div className="text">
+      <a href="http://www.transplantdb.eu/" target="_blank" rel="noopener noreferrer">transPLANT</a> – The European Commission in the transPlant project within its 7th Framework Program, under the thematic area “Infrastructures”, contract number 283496
     </div>
   </div>
 
-  <div className="flex items-center gap-6">
-    <img src={DENBI.src} alt="de.NBI logo" className="w-48 flex-shrink-0 object-contain" />
-    <div className="min-w-0">
-      <a href="https://www.denbi.de/" target="_blank" rel="noopener noreferrer" className="font-medium text-blue-600 hover:underline">de.NBI</a> – The PGP repository as first instance of the e!DAL API is registered as a service of the German Network for Bioinformatics Infrastructure (de.NBI).
+  <div className="ack-item">
+    <div className="ack-logos">
+      <img src={DENBI.src} alt="de.NBI logo" />
+      <img src={ELIXIRDE.src} alt="ELIXIR Germany logo" />
+    </div>
+    <div className="text">
+      <a href="https://www.denbi.de/" target="_blank" rel="noopener noreferrer">de.NBI</a> / <a href="https://www.elixir-europe.org/about-us/who-we-are/nodes/germany" target="_blank" rel="noopener noreferrer">ELIXIR Germany</a> – The German Network for Bioinformatics Infrastructure (de.NBI) is the German node of the European life science infrastructure ELIXIR (ELIXIR Germany). The PGP repository, as the first instance of the e!DAL API, is registered as a service of de.NBI / ELIXIR Germany.
     </div>
   </div>
 
-  <div className="flex items-center gap-6">
-    <img src={ELIXIRDE.src} alt="ELIXIR Germany logo" className="w-48 flex-shrink-0 object-contain" />
-    <div className="min-w-0">
-      <a href="https://www.elixir-europe.org/about-us/who-we-are/nodes/germany" target="_blank" rel="noopener noreferrer" className="font-medium text-blue-600 hover:underline">ELIXIR Germany</a> –
-    </div>
-  </div>
-
-  <div className="flex items-center gap-6">
-    <img src={IPK.src} alt="IPK Gatersleben logo" className="w-48 flex-shrink-0 object-contain" />
-    <div className="min-w-0">
-      <a href="http://www.ipk-gatersleben.de/" target="_blank" rel="noopener noreferrer" className="font-medium text-blue-600 hover:underline">IPK Gatersleben</a> – e!DAL was initiated and developed at Leibniz Institute of Plant Genetics and Crop Plant Research (IPK) Gatersleben as infrastructural service.
+  <div className="ack-item">
+    <img src={IPK.src} alt="IPK Gatersleben logo" />
+    <div className="text">
+      <a href="http://www.ipk-gatersleben.de/" target="_blank" rel="noopener noreferrer">IPK Gatersleben</a> – e!DAL was initiated and developed at Leibniz Institute of Plant Genetics and Crop Plant Research (IPK) Gatersleben as infrastructural service.
     </div>
   </div>
 
 </div>
 
+## Authors
+
+<AuthorList ids={['sebastian-beier', 'daniel-arend', 'manuel-feser', 'helena-schnitzer', 'dominik-brilhaus']} />

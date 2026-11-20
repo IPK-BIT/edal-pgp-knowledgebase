@@ -1,10 +1,6 @@
 ---
 title: Step 2 - Basic Metadata
 lastUpdated: 2025-12-04
-authors:
-  - sebastian-beier
-  - manuel-feser
-  - daniel-arend
 sidebar:
   order: 2
 ---

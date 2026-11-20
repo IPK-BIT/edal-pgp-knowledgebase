@@ -1,26 +1,11 @@
 ---
-title: Revision Response
-description: Understand the outcomes of the review process, including rejection, acceptance, and how to finalize your DOI.
+title: Acceptance & DOI assignment
 lastUpdated: 2025-12-02
-authors:
-  - sebastian-beier
 sidebar:
-  label: Revision Response
+  label: Acceptance & DOI assignment
   order: 4
+tableOfContents: false
 ---
-
-After the internal review (and any necessary revisions) is completed, you will receive a second automated email: the **Review Response Email**.
-
-This email contains the final decision regarding your submission. There are two main outcomes:
-
-## 1. Rejection Response
-
-If your submission still does not meet the necessary quality criteria after revision, it may be rejected.
-
-* **Feedback:** The email will contain detailed reasons for the rejection (e.g. "Metadata insufficient," "Files corrupted").
-* **Action:** You have the chance to correct the issues and **re-submit** the dataset as a new request.
-
-## 2. Acceptance Response
 
 If your dataset is approved, congratulations! The email will provide three important links that allow you to control the final publication step.
 

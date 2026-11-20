@@ -1,9 +1,6 @@
 ---
 title: Step 1 - License Agreement
 lastUpdated: 2025-12-04
-authors:
-  - sebastian-beier
-  - daniel-arend
 sidebar:
   order: 1
 ---

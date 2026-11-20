@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import AuthorCard from '@components/AuthorCard.astro';
+
+interface Props {
+  ids?: string[];
+}
+
+const { ids } = Astro.props;
+const all = await getCollection('authors');
+const authors = ids ? ids.map((id) => all.find((a) => a.id === id)).filter((a) => a !== undefined) : all;
+---
+
+<div class="not-content flex flex-col gap-2 md:gap-4">
+  {authors.map((author) => <AuthorCard author={author} />)}
+</div>

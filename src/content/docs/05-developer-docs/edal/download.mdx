@@ -1,34 +1,26 @@
 ---
 title: Download
 lastUpdated: 2025-12-03
+tableOfContents: false
 sidebar:
   order: 1
+prev: false
+next: false
 ---
-
-The e!DAL API is available in the official central [Maven-Repository](https://mvnrepository.com/artifact/de.ipk-gatersleben) and provides therefore several options to embed into your infrastructure and build management system:
-
-## Apache Maven artifacts
-
+The e!DAL API provides several options to embed into your infrastructure and build management system:
+#### Apache Maven Artifacts - https://maven.apache.org 
 ```maven
 <project>
-<dependencies>
-	<dependency>
-		<groupId>de.ipk-gatersleben</groupId>
-		<artifactId>eDAL-MetaDataAPI | eDAL-MetaDataAPI-Server | eDAL-MetaDataAPI-Client</artifactId>
-		<version>3.0.4</version>
-	</dependency>
-<dependencies>
+	<dependencies>
+		<dependency>
+			<groupId>de.ipk-gatersleben</groupId>
+			<artifactId>eDAL-MetaDataAPI | eDAL-MetaDataAPI-Server | eDAL-MetaDataAPI-Client</artifactId>
+			<version>3.0.4</version>
+		</dependency>
+	<dependencies>
 </project>
 ```
-
-:::note
-Checkout https://maven.apache.org/ for details
-:::
-
-
-
-## Gradle Build Tool
-
+#### Gradle Build Tool - https://gradle.org
 ```gradle
 repositories {
 	mavenCentral()
@@ -39,16 +31,8 @@ dependencies {
 	compile 'de.ipk-gatersleben:eDAL-MetaDataAPI-Client:3.0.4'
 }
 ```
-
-:::note
-Checkout https://gradle.org/ for details
-:::
-
-
-## fat JARs including all dependencies
+#### fat JARs including all dependencies
 
 - [Core API](https://repo1.maven.org/maven2/de/ipk-gatersleben/eDAL-MetaDataAPI/3.0.4/eDAL-MetaDataAPI-3.0.4-jar-with-dependencies.jar)
 - [Server](https://repo1.maven.org/maven2/de/ipk-gatersleben/eDAL-MetaDataAPI-Server/3.0.4/eDAL-MetaDataAPI-Server-3.0.4-jar-with-dependencies.jar)
 - [Client](https://repo1.maven.org/maven2/de/ipk-gatersleben/eDAL-MetaDataAPI-Client/3.0.4/eDAL-MetaDataAPI-Client-3.0.4-jar-with-dependencies.jar)
-
-

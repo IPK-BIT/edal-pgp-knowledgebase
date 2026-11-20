@@ -1,9 +1,6 @@
 ---
 title: Step 4 - Adding Data
 lastUpdated: 2025-12-04
-authors:
-  - sebastian-beier
-  - daniel-arend
 sidebar:
   order: 4
 ---

@@ -1,9 +1,6 @@
 ---
 title: e!DAL-PGP Records
 lastUpdated: 2025-12-02
-authors:
-  - helena-schnitzer
-  - daniel-arend
 sidebar:
   order: 2
 ---

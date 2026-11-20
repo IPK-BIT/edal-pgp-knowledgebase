@@ -14,6 +14,9 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
 	base: '/edal-pgp-knowledgebase',
+	redirects: {
+		'/': '/edal-pgp-knowledgebase/01-about/',
+	},
 	integrations: [
 		icon(),
 		starlight({
@@ -49,14 +52,10 @@ export default defineConfig({
 				]),
 			],
 			sidebar: [
+				{ slug: '01-about' },
 				{
-					label: 'About',
-					collapsed: true,
-					autogenerate: { directory: '01-about' },
-				},
-				{
-					label: 'edal-Web Submission',
-					autogenerate: { directory: '02-edal-web-submission' },
+					label: 'Data Submission',
+					autogenerate: { directory: '02-data-submission' },
 				},
 				{
 					label: 'Review Process',
@@ -70,10 +69,19 @@ export default defineConfig({
 				{
 					label: 'Developer Docs',
 					collapsed: true,
-					badge: { text: 'For Developers', variant: 'note' },
-					autogenerate: { directory: '05-developer-docs' },
+					items: [
+						{ slug: '05-developer-docs/edal' },
+						{ slug: '05-developer-docs/edal/download' },
+						{ slug: '05-developer-docs/edal/developer-info' },
+						{ slug: '05-developer-docs/edal/user-info' },
+						{ slug: '05-developer-docs/edal-web' },
+					],
 				},
 				...openAPISidebarGroups,
+				{ slug: '01-about/acknowledgements' },
+				{ slug: 'publications' },
+				{ slug: '01-about/contact' },
+				{ slug: '05-developer-docs/edal/license-disclaimer' },
 			],
 			expressiveCode: {
 				defaultProps: {
