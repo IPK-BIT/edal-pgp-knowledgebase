@@ -64,3 +64,27 @@ btn {
     --sl-content-width: 72rem;
   }
 }
+
+/* Pages with a custom headline (e.g. 01-about): hide the default title visually, keep it for screen readers */
+.main-pane:has(.page-headline) .content-panel:first-of-type {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.main-pane:has(.page-headline) .content-panel + .content-panel { padding-top: 1.5rem; }
+
+.page-headline { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.page-headline > * { margin: 0 !important; }
+.page-headline starlight-image-zoom-zoomable { display: block; height: 3.5rem; }
+.page-headline img { height: 3.5rem; width: auto; margin: 0; }
+.page-headline-text {
+  flex: 1 1 16rem;
+  min-width: 0;
+  font-size: var(--sl-text-h4);
+  font-weight: 600;
+  line-height: var(--sl-line-height-headings);
+  color: var(--sl-color-white);
+}
