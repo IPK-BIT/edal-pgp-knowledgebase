@@ -6,17 +6,17 @@ sidebar:
   order: 4
 ---
 
-# How to Provide a Dataset Before Submission to Avoid Unnecessary Rejections?
+### How to Provide a Dataset Before Submission to Avoid Unnecessary Rejections?
 
 Purpose of This Guide
 
 Many dataset rejections are not caused by bad science, but by missing ISA structure , Incomplete metadata, Broken ontology references, Formatting inconsistencies and Incorrect linkage between the ISA (Investigation-Study -Assay files)
 
-## 1. Recommended Workflow (Before Submission)
+#### 1. Recommended Workflow (Before Submission)
 
 Follow this checklist in order.
 
-### Step 1 — Create Proper ISA Structure
+##### Step 1 — Create Proper ISA Structure
 
 Your dataset must follow the ISA model:
 
@@ -30,7 +30,7 @@ Investigation
 
 Minimum required:  investigation.xlsx , isa.study.xlsx  and  isa.assay.xlsx. Common reason for rejection is uploading only the excel files without ISA structure.
 
-### Step 2 — Define Study Naming Convention
+##### Step 2 — Define Study Naming Convention
 
 Study names must follow a defined convention. For example:
 
@@ -59,7 +59,7 @@ If the site name is missing, use coordinates temporarily:
 IPGR_1985_lon-24.93388-lat-42.12002
 ```
 
-### Step 3 — Ensure All Identifiers Are Stable
+##### Step 3 — Ensure All Identifiers Are Stable
 
 Identifiers are the backbone of the dataset. Every sample must have sample name(mandatory in study file) , Accession ID and replicate IDs if replicated.
 
@@ -68,24 +68,24 @@ Identifiers are the backbone of the dataset. Every sample must have sample name(
 | plant_1     | ACC1234   | 1         |
 | plant_2     | ACC1234   | 2         |
 
-### Step 4 — Complete the Investigation File
+##### Step 4 — Complete the Investigation File
 
 Most common rejection problems happen here. Ensure that Study referenced, Assay referenced, Ontologies listed, Contacts are complete, Description filled and All protocols described
 
-# 2. Structure of the Dataset (What Must Exist)
+### 2. Structure of the Dataset (What Must Exist)
 
-## A. Investigation File
+#### A. Investigation File
 
 Must Include
 
-### 1. Investigation Metadata
+##### 1. Investigation Metadata
 
 - Title
 - Description
 - Submission date
 - Project name
 
-### 2. Investigation Contacts (CRITICAL)
+##### 2. Investigation Contacts (CRITICAL)
 
 - First Name
 - Last Name
@@ -104,7 +104,7 @@ Missing ORCID
 Only "IPK" as affiliation
 ```
 
-### 3. Ontologies Used (VERY IMPORTANT)
+##### 3. Ontologies Used (VERY IMPORTANT)
 
 Elena´s comment: Not all ontologies used in study and assays are listed in investigation.
 
@@ -116,7 +116,7 @@ You must list ALL ontologies used.
 | UO               | <http://purl.obolibrary.org/obo/uo.owl> | 2023                |
 | PO               | <http://purl.obolibrary.org/obo/po.owl> | 2023                |
 
-## B. Study File (isa.study.xlsx)
+#### B. Study File (isa.study.xlsx)
 
 Minimum Required Columns:
 
@@ -127,7 +127,7 @@ Minimum Required Columns:
 - Geographic co-ordinate (latitude)
 - Geographic co-ordinate (longitude)
 
-#### Proper Coordinate Format
+###### Proper Coordinate Format
 
 Correct format:
 
@@ -144,11 +144,11 @@ Incorrect format
 Germany (approx.)
 ```
 
-#### Basic Passport Data (Domain Specific)
+###### Basic Passport Data (Domain Specific)
 
 Must include Accession number, Material source information and country or origin and source coordinates.  Without passport data the data set is incomplete and not reusable.
 
-## C. Assay File (isa.assay.xlsx)
+#### C. Assay File (isa.assay.xlsx)
 
 Contains:
 
@@ -158,9 +158,9 @@ Contains:
 4. Unit
 5. Protocol reference
 
-# 3.Common Formatting Issues (With Examples)
+### 3.Common Formatting Issues (With Examples)
 
-## 1.Term Accession Number & Term Source REF Missing
+#### 1.Term Accession Number & Term Source REF Missing
 
 Elena´s comment: Usually Term Accession number and term source REF are left empty.
 
@@ -168,7 +168,7 @@ Elena´s comment: Usually Term Accession number and term source REF are left emp
 |-----------------|-----------------|-----------------------|
 | Days to heading | CO              | CO_321:0000025        |
 
-## 2. Confusing Trait Ontology vs Unit Ontology
+#### 2. Confusing Trait Ontology vs Unit Ontology
 
 Common mistake:
 
@@ -188,7 +188,7 @@ Correct example:
 |------------|-----------------|-----------------------|
 | centimeter | UO              | UO:0000015            |
 
-## 3. Duplicated columns
+#### 3. Duplicated columns
 
 Wrong:
 
@@ -199,7 +199,7 @@ Wrong:
 
 One column empty-> delete it
 
-## 4. Missing Link Between Files
+#### 4. Missing Link Between Files
 
 Common problem:
 
@@ -207,7 +207,7 @@ Common problem:
 2. Assay not linked to Study
 3. Misspelled file names
 
-## 5. Sample Name Missing
+#### 5. Sample Name Missing
 
 Sample Name is mandatory because:
 
@@ -216,9 +216,9 @@ Assay → links measurements to Sample Name
 
 Without it → ISA structure breaks.
 
-# 4. Domain-Specific Issues
+### 4. Domain-Specific Issues
 
-## 1. Site Location Must Be Geo Coordinates
+#### 1. Site Location Must Be Geo Coordinates
 
 Not just:
 
@@ -229,7 +229,7 @@ Gatersleben
 
 Must include Latitude and Longitude
 
-## 2.Traits Must Have Full Names linked to Ontologies
+#### 2.Traits Must Have Full Names linked to Ontologies
 
 Not acceptable:
 
@@ -247,7 +247,7 @@ Thousand kernel weight
 Days to heading
 ```
 
-## 3.Basic Passport Data Required
+#### 3.Basic Passport Data Required
 
 Missing passport data causes:
 
@@ -255,7 +255,7 @@ Missing passport data causes:
 2. Incomplete material description
 3. Reduced reusability
 
-## 4.Data Quality Checks Before Submission
+#### 4.Data Quality Checks Before Submission
 
 Perform these checks:
 
@@ -266,7 +266,7 @@ Perform these checks:
 5. All ontologies filled?
 6. All studies referenced?
 
-## 5.Final Pre-Submission Checklist
+#### 5.Final Pre-Submission Checklist
 
 Before uploading:
 
