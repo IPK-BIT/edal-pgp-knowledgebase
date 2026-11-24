@@ -88,3 +88,10 @@ btn {
   line-height: var(--sl-line-height-headings);
   color: var(--sl-color-white);
 }
+
+/* Intro video on the start page: full content width, scales down on small screens */
+.intro-video { display: block; width: 100%; max-width: 48rem; height: auto; margin-inline: auto; border-radius: 0.5rem; }
+
+/* Side-by-side download buttons (desktop submission) */
+.download-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.download-buttons > * { margin: 0 !important; }

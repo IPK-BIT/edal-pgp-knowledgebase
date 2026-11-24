@@ -4,6 +4,7 @@ lastUpdated: 2026-05-13
 tableOfContents: false
 sidebar:
   order: 0
+prev: false
 ---
 Here we explain how to submit data to e!DAL-PGP using the e!DAL-PGP Web Submission tool. 
 ## Authentication

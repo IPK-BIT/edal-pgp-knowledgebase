@@ -55,7 +55,21 @@ export default defineConfig({
 				{ slug: '01-about' },
 				{
 					label: 'Data Submission',
-					autogenerate: { directory: '02-data-submission' },
+					items: [
+						{ slug: '02-data-submission/desktop-submission' },
+						{
+							label: 'Web Submission',
+							collapsed: true,
+							items: [
+								{ slug: '02-data-submission', label: 'Overview' },
+								{ slug: '02-data-submission/license-agreement' },
+								{ slug: '02-data-submission/metadata' },
+								{ slug: '02-data-submission/authors' },
+								{ slug: '02-data-submission/adding-data' },
+							],
+						},
+						{ slug: '02-data-submission/dosanddonts' },
+					],
 				},
 				{
 					label: 'Review Process',
@@ -70,9 +84,9 @@ export default defineConfig({
 						{ slug: '04-developer-docs/edal/download' },
 						{ slug: '04-developer-docs/edal/developer-info' },
 						{ slug: '04-developer-docs/edal/user-info' },
+						...openAPISidebarGroups,
 					],
 				},
-				...openAPISidebarGroups,
 				{ slug: 'search' },
 				{ slug: 'acknowledgements' },
 				{ slug: 'publications' },
