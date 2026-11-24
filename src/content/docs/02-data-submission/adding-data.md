@@ -4,6 +4,7 @@ lastUpdated: 2025-12-04
 tableOfContents: false
 sidebar:
   order: 4
+next: false
 ---
 
 Once you have provided the necessary metadata, the final step is to upload the actual research data. The web interface offers two tabs for this purpose: **Local file upload** and **S3 Access**.
